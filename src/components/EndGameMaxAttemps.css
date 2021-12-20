@@ -1,0 +1,47 @@
+.end-attemps{
+    background: linear-gradient(to right, hsla(0, 0%, 1%, 0.959), hsla(0, 0%, 0%, 0.864)), url('https://i.ibb.co/2tQFqVp/loser.png');
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.9); */
+    color: #ffff00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top:0;
+    left: 0;
+}
+
+.end-attemps-text{
+    margin-top:20px;
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+.end-attemps-text-second{
+    margin-top:20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.button-play-again{
+    background-color: yellow;
+    width:150px;
+    height:50px;
+    border-radius: 50px;
+    font-size: 20px;
+    margin-top:20px;
+}
+
+.button-exit-play{
+    margin-top: 20px;
+    background-color: red;
+    width:150px;
+    height:50px;
+    border-radius: 50px;
+    font-size: 20px;
+    color:white;
+}

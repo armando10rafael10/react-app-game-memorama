@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Righteous', sans-serif;
+    display:flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+    /* height: 100vh; */
+    height: 100%;
+    width:100%;
+    background-color: #2778c9;
+    /* border:4px solid blueviolet; */
+}
+.banner {
+    margin-top: 25px;
+}
+.banner>img {
+    max-width: 300px;
+}
+.card {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: transform .1s;
+    transform-style: preserve-3d;
+    transition: transform .1s;
+    border:3px solid #0d2b54;
+    color : yellow;
+}
+
+.card-back, .card-front {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border-radius: 50%; */
+    border-radius: 0%;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.45);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    cursor: pointer;
+    /* border:2px solid green; */
+}
+
+.icon {
+     /* width:80px;
+    height: 80px;
+    max-width: 80px;
+    max-height: 80px;      */
+    width:100%;
+    height: 100%;
+}
+
+.flip {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+
+.card-front {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    background-color: #101c2c;
+}
+
+.card-back {
+    color: blueviolet;
+    background-color: #101C2C;
+    font-size: 30px;
+    /* display: none; */
+}
+
+
+#gameOver {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: yellow;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top:0;
+    left: 0;
+    /* border : 5px solid red; */
+}
+
+#restart {
+    padding: 20px;
+    font-size: 20px;
+    background-color: yellow;
+    border: none;
+    border-radius:10px;
+    margin-top:10px;
+}
+
+#gameBoard {
+    /* max-width: 700px; */
+    max-width: 100%;
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr 1fr 1fr 1fr ;
+    gap:5px
+}
+
+.iconImg {
+    width: 100px;
+    height: 100px;
+}
+
+@media only screen and (max-width: 700px) {
+    #gameBoard {
+        /* max-width: 700px; */
+        max-width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr;
+        grid-gap: 5px;
+        gap: 25px;
+    }
+    .card {
+        width: 70px;
+        height: 70px;}
+    .icon
+    {
+        width: 40px;
+    }
+    .card-front,.card-back {
+        border-radius:10px;
+    }
+    .iconImg {
+        width: 30px;
+        height: 30px;
+    }
+}
